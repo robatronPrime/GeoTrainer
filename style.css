@@ -1,0 +1,120 @@
+#Title{
+    background-color: #ffffff;
+    width: 17em;
+}
+
+#Title li{
+    list-style-type: none;
+    display: inherit;
+    padding: 0px;
+}
+
+#Logo{
+    float:left;
+    padding-bottom: 1em;
+
+}
+
+#Title h2{
+    float: right;
+}
+
+#Nav{
+    background-color: #a2c3c8;
+    margin-top: 1em;
+    height: 100%;
+}
+
+#Nav a:link{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0.5em;
+    color: black;
+}
+
+#Nav a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+#Nav a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+#Nav ul{
+    margin : 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+#Nav li{
+    list-style-type: none;
+    margin: 0.2em;
+    display:inherit;
+}
+
+#Nav p{
+    margin: 0.2em;
+    padding-left: 0.3em;
+    font-size: 20px;
+}
+
+#searchBar{
+    background-color: #ffffff;
+    width: 228px;
+    border:1px solid #0076a3; border-right:0px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#searchBox{
+    margin: 0;
+    font-size: 16px;
+    padding: 3px;
+    border:1px solid #ffffff; border-right:0px;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+}
+
+#searchButton{
+    margin: 0;
+    padding: 3.5px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+}
+
+#currWork{
+    
+}
+
+#Content{
+    background-color: #ffffff;
+    display: inline;
+    margin : 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+fieldset{
+    border-color: #a2c3c8;
+    border-style: solid;
+    margin : 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+#createWorkout{
+    width: 100%;
+    float: left;
+    margin-top: 0.5em;
+}
+
+#CWorkPics{
+    
+}
+
+#powGoogWh{
+    float: right;
+}

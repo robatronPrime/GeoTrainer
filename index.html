@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="p:domain_verify" content="f32adf17ba04bc43b709cae3417f16ae"/>
+    <link rel='icon' href='images/favicon.ico'>
+    <title>GeoTrainer.co.uk: Find Gyms Nere You!</title>
+    <!-- unsemantic css library -->
+    <link rel="stylesheet" type="text/css"
+        href="unsemantic-grid-responsive-tablet.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!-- font-awesome image library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="jquery.bxslider/jquery.bxslider.min.js"></script>
+    <!-- bxSlider CSS file -->
+    <link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" /> 
+</head>
+    
+<body> 
+    
+    <div id="Title" class="grid-20 tablet-grid-25 mobile-grid-100">
+        
+        <img src="images/logo.png" alt="logo" id="Logo">
+        <i class="fa fa-user fa-5x"></i>
+        <h2>Trainee Name</h2>
+        
+        <div id="Nav" class="grid-100 tablet-grid-100 mobile-grid-100">
+            <ul>
+            
+                <li><a href="index.html">Home</a></li>
+                <li><a href="findGym.html">Find a Gym</a></li>
+                <li>
+                    <p>Search Workouts</p>
+                    <div id="searchBar">
+                        <form>
+                            <input type="text" name="searchBox" id="searchBox">
+                            <button type="button" id="searchButton"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </li>
+        
+            </ul>  
+        </div>
+    </div>
+        
+    <div id="Content" class="grid-80 tablet-grid-100 mobile-grid-100">
+        <fieldset id="currentWorkout">
+            <h2>Current Workout</h2>
+            <section id="CWorkPics" align="center">
+                <div class="slider1">
+                <div class="slide">
+                    <img src="images/ballLeg.png" alt="exersizePic" id="currWork">
+                    <h3>Ball Assisted Leg Raise</h3>
+                    <p>Number of reps: 10</p>
+                </div>
+                <div class="slide">
+                    <img src="images/pushUp.png" alt="exersizePic" id="currWork">
+                    <h3>Push Up</h3>
+                    <p>Number of reps: 10</p> 
+                </div>
+                <div class="slide">
+                    <img src="images/runFloor.png" alt="exersizePic" id="currWork">
+                    <h3>Mountain Climer</h3>
+                    <p>Number of reps: 20</p>
+                </div>
+                <div class="slide">
+                    <img src="images/sitUp.png" alt="exersizePic" id="currWork">
+                    <h3>Situps</h3>
+                    <p>Number of reps: 15</p>
+                </div>
+                <div class="slide">
+                    <img src="images/pushUp.png" alt="exersizePic" id="currWork">
+                    <h3>Push Up</h3>
+                    <p>Number of reps: 15</p>
+                </div>
+                <div class="slide">
+                    <img src="images/runFloor.png" alt="exersizePic" id="currWork">
+                    <h3>Mountain Climer</h3>
+                    <p>Number of reps: 25</p>
+                </div>
+                <div class="slide"><img src="images/sitUp.png" alt="exersizePic" id="currWork">
+                    <h3>Situps</h3>
+                    <p>Number of reps: 20</p>
+                </div>
+                <div class="slide"><img src="images/pushUp.png" alt="exersizePic" id="currWork">
+                    <h3>Push Up</h3>
+                    <p>Number of reps: 20</p> 
+                </div>
+                <div class="slide"><img src="images/ballLeg.png" alt="exersizePic" id="currWork">
+                    <h3>Ball Assisted Leg Raise</h3>
+                    <p>Number of reps: 15</p>
+                </div>
+                <div class="slide"><img src="images/pushUp.png" alt="exersizePic" id="currWork">
+                    <h3>Push Up</h3>
+                    <p>Number of reps: 25</p> 
+                </div>
+                </div>
+            </section>
+        </fieldset>
+        
+        <fieldset id="createWorkout">
+            <h2>Create A Workout</h2>
+            <form>
+                
+            </form>
+        </fieldset>
+    <script>
+        $(document).ready(function(){
+            $('.slider1').bxSlider({
+                slideWidth: 200,
+                minSlides: 2,
+                maxSlides: 6,
+                slideMargin: 10
+            });
+        });
+    </script>
+    
+</body>
+</html>
