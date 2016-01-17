@@ -18,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- bxSlider Javascript file -->
     <script src="jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script src="ui.js"></script>
     <!-- bxSlider CSS file -->
     <link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" /> 
 </head>
@@ -50,76 +51,108 @@
     </div>
         
     <div id="Content" class="grid-80 tablet-grid-100 mobile-grid-100">
-        <fieldset id="currentWorkout">
-            <h2>Current Workout</h2>
-            <section id="CWorkPics" align="center">
-                <div class="slider1">
-                <div class="slide">
-                    <img src="images/ballLeg.png" alt="exersizePic" id="currWork">
-                    <h3>Ball Assisted Leg Raise</h3>
-                    <p>Number of reps: 10</p>
-                </div>
-                <div class="slide">
-                    <img src="images/pushUp.png" alt="exersizePic" id="currWork">
-                    <h3>Push Up</h3>
-                    <p>Number of reps: 10</p> 
-                </div>
-                <div class="slide">
-                    <img src="images/runFloor.png" alt="exersizePic" id="currWork">
-                    <h3>Mountain Climer</h3>
-                    <p>Number of reps: 20</p>
-                </div>
-                <div class="slide">
-                    <img src="images/sitUp.png" alt="exersizePic" id="currWork">
-                    <h3>Situps</h3>
-                    <p>Number of reps: 15</p>
-                </div>
-                <div class="slide">
-                    <img src="images/pushUp.png" alt="exersizePic" id="currWork">
-                    <h3>Push Up</h3>
-                    <p>Number of reps: 15</p>
-                </div>
-                <div class="slide">
-                    <img src="images/runFloor.png" alt="exersizePic" id="currWork">
-                    <h3>Mountain Climer</h3>
-                    <p>Number of reps: 25</p>
-                </div>
-                <div class="slide"><img src="images/sitUp.png" alt="exersizePic" id="currWork">
-                    <h3>Situps</h3>
-                    <p>Number of reps: 20</p>
-                </div>
-                <div class="slide"><img src="images/pushUp.png" alt="exersizePic" id="currWork">
-                    <h3>Push Up</h3>
-                    <p>Number of reps: 20</p> 
-                </div>
-                <div class="slide"><img src="images/ballLeg.png" alt="exersizePic" id="currWork">
-                    <h3>Ball Assisted Leg Raise</h3>
-                    <p>Number of reps: 15</p>
-                </div>
-                <div class="slide"><img src="images/pushUp.png" alt="exersizePic" id="currWork">
-                    <h3>Push Up</h3>
-                    <p>Number of reps: 25</p> 
-                </div>
-                </div>
-            </section>
-        </fieldset>
+        <h2>Current Workout</h2>
+        <section id="CWorkPics" align="center">
+            <div class="slider1">
+            <div class="slide">
+                <img src="images/ballLeg.png" alt="exersizePic" id="currWork">
+                <h3>Ball Assisted Leg Raise</h3>
+                <p>Number of reps: 10</p>
+            </div>
+            <div class="slide">
+                <img src="images/pushUp.png" alt="exersizePic" id="currWork">
+                <h3>Push Up</h3>
+                <p>Number of reps: 10</p> 
+            </div>
+            <div class="slide">
+                <img src="images/runFloor.png" alt="exersizePic" id="currWork">
+                <h3>Mountain Climer</h3>
+                <p>Number of reps: 20</p>
+            </div>
+            <div class="slide">
+                <img src="images/sitUp.png" alt="exersizePic" id="currWork">
+                <h3>Situps</h3>
+                <p>Number of reps: 15</p>
+            </div>
+            <div class="slide">
+                <img src="images/pushUp.png" alt="exersizePic" id="currWork">
+                <h3>Push Up</h3>
+                <p>Number of reps: 15</p>
+            </div>
+            <div class="slide">
+                <img src="images/runFloor.png" alt="exersizePic" id="currWork">
+                <h3>Mountain Climer</h3>
+                <p>Number of reps: 25</p>
+            </div>
+            <div class="slide"><img src="images/sitUp.png" alt="exersizePic" id="currWork">
+                <h3>Situps</h3>
+                <p>Number of reps: 20</p>
+            </div>
+            <div class="slide"><img src="images/pushUp.png" alt="exersizePic" id="currWork">
+                <h3>Push Up</h3>
+                <p>Number of reps: 20</p> 
+            </div>
+            <div class="slide"><img src="images/ballLeg.png" alt="exersizePic" id="currWork">
+                <h3>Ball Assisted Leg Raise</h3>
+                <p>Number of reps: 15</p>
+            </div>
+            <div class="slide"><img src="images/pushUp.png" alt="exersizePic" id="currWork">
+                <h3>Push Up</h3>
+                <p>Number of reps: 25</p> 
+            </div>
+            </div>
+        </section>
         
-        <fieldset id="createWorkout">
+        <div id="createWorkout" class="grid-50 tablet-grid-100 mobile-grid-100">
+            <fieldset>
             <h2>Create A Workout</h2>
             <form>
-                
+                Workout Name: <input type="text" id="Wname" value="Enter workout name"> 
+                <button type="button" id="newWorkout">Create Workout</button>
             </form>
-        </fieldset>
-    <script>
-        $(document).ready(function(){
+            <section id="exercise">
+                
+                <form>
+                    Exercise Name: <input type="text" id="Ename" value=""><br/>
+                    Exercise Type:
+                    <select id="type">
+                        <option value=" ">Select type</option>
+                        <option value="Endurance">Endurance</option>
+                        <option value="Strength">Strength</option>
+                        <option value="Balance">Balance</option>
+                        <option value="Flexibility">Flexibility</option>
+                    </select> <br/>
+                    <section id="exType">
+                        <div id="exValOne" value=""></div> <input type="text" id="inOne" value=""><br/>
+                        <div id="exValTwo" value=""></div> <input type="text" id="inTwo" value=""><br/>
+                        <div id="exValThree" value=""></div> <input type="text" id="inThree" value=""><br/>
+                    </section>
+                    <div for="desc">Exercise Description:</div>
+                    <textarea name="desc" rows="10" cols="50" autocomplete="off" class="grid-100 tablet-grid-100 mobile-grid-100"></textarea><br/>
+                    <button type="button" id="newExercise">Create Exercise</button>
+                </form>
+            </section>
+            </fieldset>
+        </div>
+        
+        <div id="displayExs" class="grid-50 tablet-grid-100 mobile-grid-100">
+            <fieldset>
+                <h3 id="workoutName" value=""></h3>
+                <p id="exName" value=""></p>
+                <p id="exType" value=""></p>
+                <div id="valOneName" value=""></div> <p id="valOneIn"></p>
+                <div id="valTwoName" value=""></div> <p id="valTwoIn"></p>
+                <div id="valThreeName" value=""></div> <p id="valThreeIn"></p>
+            </fieldset>
+        </div>
+        <script>
             $('.slider1').bxSlider({
                 slideWidth: 200,
                 minSlides: 2,
                 maxSlides: 6,
                 slideMargin: 10
             });
-        });
-    </script>
-    
+        </script>
+    </div>
 </body>
 </html>
