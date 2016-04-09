@@ -12,7 +12,12 @@
 #Logo{
     float:left;
     padding-bottom: 1em;
+}
 
+#altLogo{
+    float:left;
+    padding-bottom: 1em;
+    height: 20em;
 }
 
 #Title h2{
@@ -28,7 +33,7 @@
 #Nav a:link{
     font-size: 20px;
     text-decoration: none;
-    padding: 0.5em;
+
     color: black;
 }
 
@@ -40,6 +45,7 @@
 #Nav a:hover{
     text-decoration: none;
     color: black;
+    background-color: #72898C;
 }
 
 #Nav ul{
@@ -57,6 +63,10 @@
     margin: 0.2em;
     padding-left: 0.3em;
     font-size: 20px;
+}
+
+#linkPoint{
+    visibility: hidden;
 }
 
 #searchBar{
@@ -95,6 +105,7 @@
 }
 
 fieldset{
+    background-color: #a2c3c8;
     border-color: #a2c3c8;
     border-style: solid;
     margin : 0px 0px 0px 0px;
@@ -102,19 +113,28 @@ fieldset{
 }
 
 #createWorkout{
-    float: left;
     margin-top: 0.5em;
-    padding: 0px 0px 0px 0px;
+    padding: 1em;
 }
 
-#displayExs{
-    float: left;
-    margin-top: 0.5em;
-    padding: 0px 0px 0px 0px;
-}
-
-#exercise{
+.form{
     display: inline;
+}
+
+input{
+  margin: 0.5em;
+}
+
+#signIn{
+  background-color: #72898C;
+  border-color: #72898C;
+  border-style: solid;
+  margin : 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.hide{
+  display: none;
 }
 
 #powGoogWh{
@@ -137,4 +157,7 @@ fieldset{
     font-weight: 300;
 }
 
-        
+input:required:invalid, input:focus:invalid {
+  border-color: red;
+  -moz-box-shadow: none;
+}

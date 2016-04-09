@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="p:domain_verify" content="f32adf17ba04bc43b709cae3417f16ae"/>
+    <link rel='icon' href='images/favicon.ico'>
+    <title>GeoTrainer.co.uk: Find Gyms Nere You!</title>
+    <!-- unsemantic css library -->
+    <link rel="stylesheet" type="text/css"
+        href="unsemantic-grid-responsive-tablet.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!-- font-awesome image library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="Title" class="grid-100 tablet-grid-100 mobile-grid-100">
+        <img src="images/logo.png" alt="logo" id="altLogo">
+    </div>
+
+    <div id="Content" class="grid-100 tablet-grid-100 mobile-grid-100">
+        <fieldset id="signUp">
+          <h2>Sign Up To Start Creating Workouts</h2>
+          <button type="button" id="upStart">Click to Start</button>
+
+          <section id="upField" class="hide">
+          <form class="form">
+            <input type="text" id="User" value="Usename"> <br/>
+            <input type="text" id="Email" value="Email"> <br/>
+            <input type="text" id="Pass" value="Password"> <br/>
+            <input type="text" id="RePass" value="Retype Password"> <br/>
+
+            <button type="button" id="signUp">Sign Up</button>
+          </form>
+        </section>
+        </fieldset>
+
+        <fieldset id="signIn">
+          <h2>Already a Member?</h2>
+          <p>Welcome back! Sign in to get started.</p>
+
+          <input type="text" id="User" value="Usename"> <br/>
+          <input type="text" id="Pass" value="Password"> <br/>
+
+          <button type="button" id="signInLink">Sign In</button>
+        </fieldset>
+    </div>
+      <script>
+        var start = document.getElementById('upStart');
+
+          start.onclick = function() {
+              showHideWBT()
+            }
+
+          function showHideWBT() {
+            var upF = document.getElementById('upField');
+            upF.style.display = (upF.style.display == 'block') ? 'none' : 'block';
+        }
+      </script>
+  </body>
+</html>

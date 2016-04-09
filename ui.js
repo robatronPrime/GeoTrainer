@@ -1,33 +1,42 @@
 $(document).ready(function(){
     
-        var newE = document.getElementById("newExercise");
+    var newE = document.getElementById("newExercise");
+    var endurList = ["Distance", "Time", "Intensity"],
+    strList = ["Weight", "Reps", "Sets"],
+    balList = ["Time", "Difficulty", "Weight"],
+    flexList = ["Time", "Difficulty", "Intensity"];
     
-    newE.addEventListener('click', getServerTime, false)
-
-    $("#exercise").hide();
-            
+    $("#hideUser").hide();
+    $("#hideUser").hide();
+    $("#exercise").hide();    
     $("#displayExs").hide();
-            
-    $("#newWorkout").click(function(){
+    $("#newUserForm").hide();
+    
+    $("#newWorkout").click(function(){  
+    $("#exercise").show();
+    $("#newExercise").click(function(){
         
-        $("#exercise").show();
-        
-        function showHint(str) {
-            if (str.length == 0) { 
-                document.getElementById("newWorkout").innerHTML = "";
-                return;
-            } else {
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                        document.getElementById("newWorkout").innerHTML = xmlhttp.responseText;
-                    }
-                };
-                xmlhttp.open("GET", "serverSide.php?q=" + str, true);
-                xmlhttp.send();
-            }
-        }
     });
+    
+   $("#type").on('change', function(){
+       if ($("#type").val() == "Endurance"){
+           $("#exValOne").text(endurList.slice(0,1));
+           $("#exValTwo").text(endurList.slice(1,2));
+           $("#exValThree").text(endurList.slice(2,3));
+       } else if ($("#type").val() == "Strength") {
+           $("#exValOne").text(strList.slice(0,1));
+           $("#exValTwo").text(strList.slice(1,2));
+           $("#exValThree").text(strList.slice(2,3));
+       } else if ($("#type").val() == "Balance") {
+           $("#exValOne").text(balList.slice(0,1));
+           $("#exValTwo").text(balList.slice(1,2));
+           $("#exValThree").text(balList.slice(2,3));
+       } else if ($("#type").val() == "Flexibility") {
+           $("#exValOne").text(flexList.slice(0,1));
+           $("#exValTwo").text(flexList.slice(1,2));
+           $("#exValThree").text(flexList.slice(2,3));
+       }
+   })
             
     $("#newExercise").click(function(){
         //*alert("Value: " + $("#Wname").val());*/
@@ -40,4 +49,5 @@ $(document).ready(function(){
         $("#displayExs").show();
                 
     });
+});
 });

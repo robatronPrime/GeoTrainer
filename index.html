@@ -20,37 +20,30 @@
     <script src="jquery.bxslider/jquery.bxslider.min.js"></script>
     <script src="ui.js"></script>
     <!-- bxSlider CSS file -->
-    <link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" /> 
+    <link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
 </head>
-    
-<body> 
-    
+<body>
+
     <div id="Title" class="grid-20 tablet-grid-25 mobile-grid-100">
-        
+
         <img src="images/logo.png" alt="logo" id="Logo">
-        <i class="fa fa-user fa-5x"></i>
-        <h2>Trainee Name</h2>
-        
+        <div>
+            <i class="fa fa-user fa-5x"></i>
+            <h2>Trainee Name</h2>
+        </div>
+
         <div id="Nav" class="grid-100 tablet-grid-100 mobile-grid-100">
             <ul>
-            
                 <li><a href="index.html">Home</a></li>
+                <li><a href="signIn.html">Sign In</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
                 <li><a href="findGym.html">Find a Gym</a></li>
-                <li>
-                    <p>Search Workouts</p>
-                    <div id="searchBar">
-                        <form>
-                            <input type="text" name="searchBox" id="searchBox">
-                            <button type="button" id="searchButton"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
-                </li>
-        
-            </ul>  
+                <li><a href="searchWork.html">Search Workouts</a></li>
+            </ul>
         </div>
     </div>
-        
-    <div id="Content" class="grid-80 tablet-grid-100 mobile-grid-100">
+
+    <div id="Content" class="grid-80 tablet-grid-80 mobile-grid-100">
         <h2>Current Workout</h2>
         <section id="CWorkPics" align="center">
             <div class="slider1">
@@ -62,7 +55,7 @@
             <div class="slide">
                 <img src="images/pushUp.png" alt="exersizePic" id="currWork">
                 <h3>Push Up</h3>
-                <p>Number of reps: 10</p> 
+                <p>Number of reps: 10</p>
             </div>
             <div class="slide">
                 <img src="images/runFloor.png" alt="exersizePic" id="currWork">
@@ -90,7 +83,7 @@
             </div>
             <div class="slide"><img src="images/pushUp.png" alt="exersizePic" id="currWork">
                 <h3>Push Up</h3>
-                <p>Number of reps: 20</p> 
+                <p>Number of reps: 20</p>
             </div>
             <div class="slide"><img src="images/ballLeg.png" alt="exersizePic" id="currWork">
                 <h3>Ball Assisted Leg Raise</h3>
@@ -98,20 +91,20 @@
             </div>
             <div class="slide"><img src="images/pushUp.png" alt="exersizePic" id="currWork">
                 <h3>Push Up</h3>
-                <p>Number of reps: 25</p> 
+                <p>Number of reps: 25</p>
             </div>
             </div>
         </section>
-        
-        <div id="createWorkout" class="grid-50 tablet-grid-100 mobile-grid-100">
+
+        <div id="createWorkout" class="grid-100 tablet-grid-100 mobile-grid-100">
             <fieldset>
             <h2>Create A Workout</h2>
             <form>
-                Workout Name: <input type="text" id="Wname" value="Enter workout name"> 
+                Workout Name: <input type="text" id="Wname" value="Enter workout name">
                 <button type="button" id="newWorkout">Create Workout</button>
             </form>
-            <section id="exercise">
-                
+            <section id="exercise" class="form">
+
                 <form>
                     Exercise Name: <input type="text" id="Ename" value=""><br/>
                     Exercise Type:
@@ -134,17 +127,7 @@
             </section>
             </fieldset>
         </div>
-        
-        <div id="displayExs" class="grid-50 tablet-grid-100 mobile-grid-100">
-            <fieldset>
-                <h3 id="workoutName" value=""></h3>
-                <p id="exName" value=""></p>
-                <p id="exType" value=""></p>
-                <div id="valOneName" value=""></div> <p id="valOneIn"></p>
-                <div id="valTwoName" value=""></div> <p id="valTwoIn"></p>
-                <div id="valThreeName" value=""></div> <p id="valThreeIn"></p>
-            </fieldset>
-        </div>
+
         <script>
             $('.slider1').bxSlider({
                 slideWidth: 200,

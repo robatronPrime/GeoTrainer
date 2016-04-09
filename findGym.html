@@ -29,73 +29,66 @@
   </head>
   <body>
     <div id="Title" class="grid-20 tablet-grid-25 mobile-grid-100">
-        
+
         <img src="images/logo.png" alt="logo" id="Logo">
         <i class="fa fa-user fa-5x"></i>
         <h2>Trainee Name</h2>
-        
+
         <div id="Nav" class="grid-100 tablet-grid-100 mobile-grid-100">
             <ul>
-            
+
                 <li><a href="index.html">Home</a></li>
+                <li><a href="signIn.html">Sign In</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
                 <li><a href="findGym.html">Find a Gym</a></li>
-                <li>
-                <p>Search Workouts</p>
-                <div id="searchBar">
-                    <form>
-                        <input type="text" name="searchBox" id="searchBox">
-                        <button type="button" id="searchButton"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-                </li>
-        
-            </ul>  
+                <li><a href="searchWork.html">Search Workouts</a></li>
+            </ul>
         </div>
     </div>
-    
+
     <div id="map"></div>
 
 <script>
 function initMap() {
-    
+
     var pureGym = {lat: 50.799923, lng: -1.088459};
     var everybodyPilates = {lat: 50.791157, lng: -1.094548};
-    
+
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
         zoom: 15
     });
-    
+
     var infoWindow = new google.maps.InfoWindow({map: map});
-    
+
     var pureGymMarker = new google.maps.Marker({
         position: pureGym,
         map: map,
         title: 'Pure Gym'
     });
-    
+
     var everybodyPilatesMarker = new google.maps.Marker({
         position: everybodyPilates,
         map: map,
         title: 'Everybody Pilates'
     });
-    
+
     var pureGymContentString = '<h2>Pure Gym</h2>';
-    
+
     var everybodyPilatesContentString = '<h2>Everybody Pilates</h2>';
 
     var pureGymInfowindow = new google.maps.InfoWindow({
         content: pureGymContentString
     });
-    
+
     var everybodyPilatesInfowindow = new google.maps.InfoWindow({
         content: everybodyPilatesContentString
     });
-  
+
     pureGymMarker.addListener('click', function() {
         pureGymInfowindow.open(map, pureGymMarker);
     });
-    
+
     everybodyPilatesMarker.addListener('click', function() {
         everybodyPilatesInfowindow.open(map, everybodyPilatesMarker);
     });
@@ -127,11 +120,11 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
 }
 </script>
-      
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhqPN-hxK48GIhLEMnXROvcNiCFCktoMo&signed_in=true&callback=initMap"
         async defer>
     </script>
-      
+
 
     <img src="images/powered_by_google_on_white_hdpi.png" alt="powGoogWh" id="powGoogWh">
 
