@@ -1,3 +1,14 @@
+<?php
+include_once 'dbconfig.php';
+if(!$user->is_loggedin())
+{
+ $user->redirect('index.php');
+}
+$user_id = $_SESSION['user_session'];
+$stmt = $DB_con->prepare("SELECT * FROM users WHERE user_id=:user_id");
+$stmt->execute(array(":user_id"=>$user_id));
+$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+?>
 
 <!DOCTYPE html>
 <html>
@@ -8,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="p:domain_verify" content="f32adf17ba04bc43b709cae3417f16ae"/>
     <link rel='icon' href='images/favicon.ico'>
-    <title>GeoTrainer.co.uk: Find Gyms Nere You!</title>
+    <title>GeoTrainer.co.uk: Find Gyms Nere You! Welcome - <?php print($userRow['user_email']); ?></title>
     <!-- unsemantic css library -->
     <link rel="stylesheet" type="text/css"
         href="unsemantic-grid-responsive-tablet.css"/>
@@ -30,12 +41,14 @@
         <img src="images/logo.png" alt="logo" id="Logo">
         <div>
             <i class="fa fa-user fa-5x"></i>
+            <h2>Welcome : <?php print($userRow['user_name']); ?></h2>
         </div>
 
         <div id="Nav" class="grid-100 tablet-grid-100 mobile-grid-100">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="signUpIn.php">Sign Up or LogIn</a></li>
+                <li><a href="signIn.html">Sign In</a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
                 <li><a href="findGym.html">Find a Gym</a></li>
                 <li><a href="searchWork.html">Search Workouts</a></li>
             </ul>
