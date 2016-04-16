@@ -1,4 +1,5 @@
 <?php
+
 class USER
 {
     private $db;
@@ -39,9 +40,9 @@ class USER
           $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
           if($stmt->rowCount() > 0)
           {
-             if(password_verify($upass, $userRow['user_pass']))
+             if(password_verify($upass, $userRow['password']))
              {
-                $_SESSION['user_session'] = $userRow['user_id'];
+                $_SESSION['user_session'] = $userRow['id'];
                 return true;
              }
              else

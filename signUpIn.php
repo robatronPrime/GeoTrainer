@@ -1,10 +1,11 @@
 <?php
   /*sign in php*/
   require_once 'Dbconfig.php';
+  require_once 'password.php';
 
   if($user->is_loggedin()!="")
   {
-    $user->redirect('index.html');
+    $user->redirect('index.php');
   }
 
   if(isset($_POST['btn-login']))
@@ -15,7 +16,7 @@
 
     if($user->login($uname,$umail,$upass))
     {
-      $user->redirect('index.html');
+      $user->redirect('index.php');
     }
     else
     {
@@ -54,21 +55,21 @@
       {
         try
         {
-          $stmt = $DB_con->prepare("SELECT user_name,user_email FROM users WHERE user_name=:uname OR user_email=:umail");
+          $stmt = $DB_con->prepare("SELECT username,email FROM users WHERE username=:uname OR email=:umail");
           $stmt->execute(array(':uname'=>$uname, ':umail'=>$umail));
           $row=$stmt->fetch(PDO::FETCH_ASSOC);
 
-         if($row['user_name']==$uname) {
+         if($row['username']==$uname) {
             $error[] = "sorry username already taken !";
          }
-         else if($row['user_email']==$umail) {
+         else if($row['email']==$umail) {
             $error[] = "sorry email id already taken !";
          }
          else
          {
             if($user->register($fname,$lname,$uname,$umail,$upass))
             {
-                $user->redirect('sign-up.php?joined');
+                $user->redirect('signUpIn.php?joined');
             }
          }
      }
@@ -107,7 +108,7 @@
     <div id="Content" class="grid-100 tablet-grid-100 mobile-grid-100">
         <fieldset id="signUp">
           <h2>Sign Up To Start Creating Workouts</h2>
-          <form class="form">
+          <form class="form" method="post">
             <?php
             if(isset($error))
             {

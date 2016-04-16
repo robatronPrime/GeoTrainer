@@ -1,5 +1,7 @@
 <?php
 include_once 'dbconfig.php';
+include_once 'user.php';
+
 if(!$user->is_loggedin())
 {
  $user->redirect('index.php');
@@ -41,7 +43,8 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
         <img src="images/logo.png" alt="logo" id="Logo">
         <div>
             <i class="fa fa-user fa-5x"></i>
-            <h2>Welcome : <?php print($userRow['user_name']); ?></h2>
+            <h2>Welcome : <?php print($userRow['username']); ?></h2>
+            <label><a href="logout.php?logout=true"><i class="glyphicon glyphicon-log-out"></i> logout</a></label>
         </div>
 
         <div id="Nav" class="grid-100 tablet-grid-100 mobile-grid-100">
